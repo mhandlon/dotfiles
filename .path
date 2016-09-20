@@ -1,0 +1,24 @@
+# Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin
+
+#Laravel
+PATH=$HOME/.composer/vendor/bin:$PATH
+
+#NPM - http://www.sitepoint.com/beginners-guide-node-package-manager/
+export PATH=$HOME/.node_modules_global/bin:$PATH
+
+#Go Lang
+#Don't set GOROOT - go tools know where they are supposed to be and you rarely need to set it.
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOPATH/bin
+
+#glassfish
+export GLASSFISH_HOME=/usr/local/opt/glassfish/libexec
+export PATH=${PATH}:${GLASSFISH_HOME}/bin
+
+#ngrok
+PATH=$PATH:.
+
+PATH=$(echo $PATH | sed 's|/usr/local/bin||; s|/usr/local/sbin||; s|::|:|; s|^:||; s|\(.*\)|/usr/local/bin:/usr/local/sbin:\1|')
+
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/Users/mhandlon/bin
