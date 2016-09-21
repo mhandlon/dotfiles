@@ -55,7 +55,7 @@ alias la#="ls -la | awk '
 }'"
 
 # File size
-alias fs="stat -f \"%z bytes\""
+#alias fs="stat -f \"%z bytes\""
 
 # Always enable colored `grep` output
 alias grep='grep --color=auto '
